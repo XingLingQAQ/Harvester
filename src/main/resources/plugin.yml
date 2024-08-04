@@ -1,0 +1,56 @@
+name: Harvester
+version: '${project.version}'
+main: org.achymake.harvester.Harvester
+api-version: '1.20'
+prefix: '${project.name}'
+load: POSTWORLD
+depend:
+  - WorldGuard
+author: AchyMake
+description: '${project.description}'
+commands:
+  harvester:
+    usage: /harvester help
+    description: message
+    permission: harvester.command.harvester
+    permission-message: You do not have the permission to execute the command
+permissions:
+  harvester.command.harvester:
+    description: message
+    default: op
+  harvester.event.harvest.carrots:
+    description: message
+    default: op
+  harvester.event.harvest.potatoes:
+    description: message
+    default: op
+  harvester.event.harvest.wheat:
+    description: message
+    default: op
+  harvester.event.harvest.beetroots:
+    description: message
+    default: op
+  harvester.event.harvest.cocoa:
+    description: message
+    default: op
+  harvester.event.harvest.nether_wart:
+    description: message
+    default: op
+  harvester.event.harvest.item.wooden_hoe:
+    description: message
+    default: op
+  harvester.event.harvest.item.stone_hoe:
+    description: message
+    default: op
+  harvester.event.harvest.item.iron_hoe:
+    description: message
+    default: op
+  harvester.event.harvest.item.golden_hoe:
+    description: message
+    default: op
+  harvester.event.harvest.item.diamond_hoe:
+    description: message
+    default: op
+  harvester.event.harvest.item.netherite_hoe:
+    description: message
+    default: op
