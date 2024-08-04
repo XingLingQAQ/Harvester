@@ -26,12 +26,12 @@ public record Harvest(Harvester plugin) implements Listener {
     private FileConfiguration getConfig() {
         return plugin.getConfig();
     }
-    @EventHandler(priority = EventPriority.LOWEST)
+    @EventHandler(priority = EventPriority.HIGHEST)
     public void onHarvest(HarvestEvent event) {
         Player player = event.getPlayer();
         Block block = event.getBlock();
-        if (!getConfig().getBoolean("enable"))return;
         if (event.isCancelled())return;
+        if (!getConfig().getBoolean("enable"))return;
         if (!player.hasPermission("harvester.event.harvest." + block.getType().toString().toLowerCase()))return;
         if (player.getInventory().getItemInMainHand().getType().equals(Material.WOODEN_HOE)) {
             if (!player.hasPermission("harvester.event.harvest.item.wooden_hoe"))return;
